@@ -1,0 +1,2 @@
+class RestFrameworkSettings:
+    pass
