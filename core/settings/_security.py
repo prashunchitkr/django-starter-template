@@ -3,6 +3,8 @@ from configurations.values import SecretValue
 
 class SecuritySettings:
 
+    ENVIRONMENT = SecretValue()
+
     SECRET_KEY = SecretValue()
 
     ROOT_URLCONF = "core.urls"
