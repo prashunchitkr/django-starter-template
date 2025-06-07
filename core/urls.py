@@ -3,15 +3,14 @@ from django.contrib import admin
 from django.urls import path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
-urlpatterns = [
-    path(
-        "admin/",
-        admin.site.urls,
-    ),
-]
+urlpatterns = []
 
 if S.ENVIRONMENT.lower() in ("development",):
     urlpatterns += [
+        path(
+            "admin/",
+            admin.site.urls,
+        ),
         path(
             "swagger/schema/",
             SpectacularAPIView.as_view(),
