@@ -1,10 +1,6 @@
-from core.settings._defaults import Defaults as D
+from configurations.values import DatabaseURLValue
 
 
 class DatabaseSettings:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": D.BASE_DIR / "db.sqlite3",
-        }
-    }
+
+    DATABASES = DatabaseURLValue()
