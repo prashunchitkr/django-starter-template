@@ -1,6 +1,6 @@
 from django.conf import settings as S
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = []
@@ -22,3 +22,14 @@ if S.ENVIRONMENT.lower() in ("development",):
             name="api_swagger",
         ),
     ]
+
+urlpatterns += [
+    path(
+        "",
+        include("health.urls"),
+    ),
+    path(
+        "auth/",
+        include("_auth.urls"),
+    ),
+]

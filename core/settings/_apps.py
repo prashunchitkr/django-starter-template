@@ -6,4 +6,5 @@ class AppsSettings:
     INSTALLED_APPS = D.INSTALLED_APPS + [
         # User installed apps
         "_auth",
+        "health",
     ]
