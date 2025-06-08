@@ -9,13 +9,14 @@ readme = "README.md"
 requires-python = ">3.13,<4.0"
 dependencies = [
     "django (>=5.2.1,<6.0.0)",
-    "django-configurations[cache] (>=2.5.1,<3.0.0)",
+    "django-configurations[cache,database]>=2.5.1,<3.0.0",
     "dotenv (>=0.9.9,<0.10.0)",
     "django-cors-headers (>=4.7.0,<5.0.0)",
     "djangorestframework>=3.16.0",
     "django-filter>=25.1",
-    "drf-spectacular[sidecar]>=0.28.0",
     "djangorestframework-simplejwt>=5.5.0",
+    "drf-spectacular>=0.28.0",
+    "psycopg[binary]>=3.2.9",
 ]
 
 [dependency-groups]
