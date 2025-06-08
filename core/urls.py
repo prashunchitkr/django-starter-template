@@ -25,7 +25,11 @@ if S.ENVIRONMENT.lower() in ("development",):
 
 urlpatterns += [
     path(
-        "hello/",
-        include("hello.urls"),
+        "",
+        include("health.urls"),
+    ),
+    path(
+        "auth/",
+        include("_auth.urls"),
     ),
 ]
