@@ -2,7 +2,6 @@ from configurations.values import SecretValue
 
 
 class SecuritySettings:
-
     ENVIRONMENT = SecretValue()
 
     SECRET_KEY = SecretValue()
@@ -16,5 +15,3 @@ class SecuritySettings:
     DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
     AUTH_USER_MODEL = "_auth.User"
-
-    DATA_SIGN_KEY = SecretValue()
