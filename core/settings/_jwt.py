@@ -1,12 +1,9 @@
 from datetime import timedelta
 
-from configurations.values import SecretValue, Value
+from configurations.values import Value
 
 
 class JWTSettings:
-
-    SIGNING_KEY = SecretValue()
-
     JWT_ALGORITHM = Value(default="HS256")
 
     SIMPLE_JWT = {

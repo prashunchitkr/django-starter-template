@@ -1,12 +1,11 @@
 from rest_framework import serializers
 
-from _auth.serializers import UserSerializer
+from _auth.serializers import ListUserSerializer
 
 
 class AuthHealthCheckResponseSerializer(serializers.Serializer):
-
     status = serializers.CharField()
 
     headers = serializers.DictField()
 
-    user = UserSerializer(read_only=True)
+    user = ListUserSerializer(read_only=True)
