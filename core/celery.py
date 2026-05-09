@@ -7,7 +7,7 @@ from configurations import setup
 
 setup()
 
-from celery import Celery
+from celery import Celery  # noqa: E402
 
 app = Celery("core")
 

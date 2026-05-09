@@ -1,9 +1,10 @@
 from rest_framework.generics import RetrieveAPIView
 
+from base.mixins import LoggingMixin
 from health.serializers import AuthHealthCheckResponseSerializer
 
 
-class AuthHealthCheckView(RetrieveAPIView):
+class AuthHealthCheckView(LoggingMixin, RetrieveAPIView):
     serializer_class = AuthHealthCheckResponseSerializer
 
     def get_object(self):

@@ -5,6 +5,6 @@ class MiddlewareSettings:
     MIDDLEWARE = (
         D.MIDDLEWARE
         + [
-            # Custom Middlewares
+            "core.middlewares.logging.RequestLoggingMiddleware",
         ]
     )
