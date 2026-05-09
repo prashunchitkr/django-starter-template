@@ -10,9 +10,4 @@ class HealthCheckView(RetrieveAPIView):
     serializer_class = HealthCheckResponseSerializer
 
     def get_object(self):
-        data = {
-            "status": "OK",
-            "headers": self.request.headers,
-        }
-
-        return data
+        return {"status": "OK"}

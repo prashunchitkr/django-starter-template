@@ -1,5 +1,4 @@
 class DjangoSpectacularSettings:
-
     SPECTACULAR_SETTINGS = {
         "TITLE": "Your Project API",
         "DESCRIPTION": "Your project description",

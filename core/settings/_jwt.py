@@ -1,12 +1,9 @@
 from datetime import timedelta
 
-from configurations.values import Value
-
 
 class JWTSettings:
-    JWT_ALGORITHM = Value(default="HS256")
-
     SIMPLE_JWT = {
+        "ALGORITHM": "HS256",
         "USER_ID_CLAIM": "user_id",
         "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
         "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
