@@ -1,4 +1,5 @@
 from django.urls import path
+
 from _auth.views.user import ListUserView
 
 urlpatterns = [

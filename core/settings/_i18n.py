@@ -1,5 +1,4 @@
 class I18NSettings:
-
     LANGUAGE_CODE = "en-us"
 
     TIME_ZONE = "UTC"

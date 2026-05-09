@@ -3,7 +3,6 @@ from corsheaders.defaults import default_headers, default_methods
 
 
 class CorsSettings:
-
     ALLOWED_HOSTS = ListValue()
 
     CORS_ALLOWED_ORIGINS = ListValue()

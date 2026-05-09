@@ -1,5 +1,4 @@
 class ValidatorsSettings:
-
     AUTH_PASSWORD_VALIDATORS = [
         {
             "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa 501
