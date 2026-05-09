@@ -1,4 +1,4 @@
-.PHONY: install migrate makemigrations test lint format shell run superuser
+.PHONY: install migrate makemigrations test lint format shell run superuser celery
 
 install:
 	uv sync
@@ -30,3 +30,6 @@ run:
 
 superuser:
 	uv run python manage.py createsuperuser
+
+celery:
+	uv run celery -A core worker -l INFO

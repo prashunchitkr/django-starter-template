@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 from core.settings._apps import AppsSettings
 from core.settings._cache import CacheSettings
+from core.settings._celery import CelerySettings
 from core.settings._cors import CorsSettings
 from core.settings._database import DatabaseSettings
 from core.settings._i18n import I18NSettings
@@ -20,6 +21,7 @@ class BaseSettings(
     I18NSettings,
     DatabaseSettings,
     CacheSettings,
+    CelerySettings,
     RestFrameworkSettings,
     JWTSettings,
     CorsSettings,

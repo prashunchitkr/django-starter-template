@@ -32,6 +32,21 @@ services:
     volumes:
       - valkey_data:/data
 
+  celery_worker:
+    build: .
+    env_file:
+      - ./.env
+    environment:
+      - DJANGO_ENVIRONMENT=production
+      - DJANGO_SETTINGS_MODULE=core.settings
+      - DJANGO_CONFIGURATION=ProductionSettings
+    command: celery -A core worker -l INFO
+    depends_on:
+      db:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+
   web:
     build: .
     env_file:
