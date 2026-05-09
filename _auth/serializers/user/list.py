@@ -6,7 +6,6 @@ from _auth.models import User
 class ListUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-
         fields = (
             "id",
             "first_name",

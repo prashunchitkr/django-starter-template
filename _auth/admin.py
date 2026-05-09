@@ -6,14 +6,22 @@ from django.utils.translation import gettext_lazy as _
 
 
 class PermissionAdmin(admin.ModelAdmin):
-
     model = Permission
 
-    fields = ("name",)
+    list_display = (
+        "name",
+        "codename",
+        "content_type",
+    )
+    list_filter = ("content_type",)
+    search_fields = (
+        "name",
+        "codename",
+    )
+    ordering = ("content_type", "name")
 
 
 class UserAdmin(BaseUserAdmin):
-
     fieldsets = (
         (
             None,

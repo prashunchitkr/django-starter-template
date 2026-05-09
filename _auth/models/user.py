@@ -7,7 +7,6 @@ from base.models import BaseModel
 
 
 class User(AbstractUser, BaseModel):
-
     username = None
 
     email = models.EmailField(
@@ -18,9 +17,17 @@ class User(AbstractUser, BaseModel):
 
     USERNAME_FIELD = "email"
 
-    REQUIRED_FIELDS = (
+    REQUIRED_FIELDS = [
         "first_name",
         "last_name",
-    )
+    ]
 
     objects = UserManager()
+
+    class Meta(AbstractUser.Meta, BaseModel.Meta):
+        ordering = ("-created_at",)
+        verbose_name = _("user")
+        verbose_name_plural = _("users")
+
+    def __str__(self) -> str:
+        return self.email
