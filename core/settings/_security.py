@@ -8,8 +8,6 @@ class SecuritySettings:
 
     ROOT_URLCONF = "core.urls"
 
-    WSGI_APPLICATION = "core.wsgi.application"
-
     ASGI_APPLICATION = "core.asgi.application"
 
     DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
