@@ -8,7 +8,7 @@ class ListUserView(ListAPIView):
     serializer_class = ListUserSerializer
 
     queryset = User.objects.order_by(
-        "created_at",
+        "-created_at",
         "first_name",
         "last_name",
     )
